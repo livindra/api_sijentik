@@ -24,8 +24,8 @@ class UserSeeder extends Seeder
             'status' => 'approved',
         ]);
 
-        // create 10 random users
-        for ($i = 0; $i < 10; $i++) {
+        // create 5 random users
+        for ($i = 0; $i < 5; $i++) {
             $user = User::factory()->make();
             $user->address = fake()->address();
             $user->rtrw = fake()->bothify('##/##');

@@ -13,13 +13,15 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('address');
-            $table->string('rtrw');
+            $table->string('profile_photo')->nullable();
             $table->string('password');
-            $table->string('role')->default('Kader');
+            $table->string('role')->default('user');
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
 
             $table->string('otp')->nullable();
             $table->timestamp('otp_expires_at')->nullable();
+
+            $table->string('rtrw');
 
             $table->timestamps();
         });
