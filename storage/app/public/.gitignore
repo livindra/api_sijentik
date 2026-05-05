@@ -1,2 +1,8 @@
 *
 !.gitignore
+!profile/
+!laporan/
+profile/*
+!profile/.gitkeep
+laporan/*
+!laporan/.gitkeep
