@@ -33,6 +33,7 @@ class OtpController extends Controller
         Log::info("OTP DB: $otp");
 
         try {
+            set_time_limit(120);
             Mail::to($user->email)->send(new OtpMail($otp));
         } catch (\Exception $e) {
             Log::error($e->getMessage());
